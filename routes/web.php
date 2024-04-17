@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\BrandController as AdminBrandController;
 use App\Http\Controllers\Admin\ReportController as AdminReportController;
 use App\Http\Controllers\Admin\BookingController as AdminBookingController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Front\BenefitController;
+use App\Http\Controllers\Front\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,9 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
 Route::name('front.')->group(function () {
   Route::get('/', [LandingController::class, 'index'])->name('index');
+  Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog');
   Route::get('/detail/{slug}', [DetailController::class, 'index'])->name('detail');
+  Route::get('/benefit', [BenefitController::class, 'index'])->name('benefit');
 
   Route::group(['middleware' => 'auth'], function () {
     Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');

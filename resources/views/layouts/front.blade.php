@@ -11,12 +11,15 @@
 
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
   <!-- Libraries -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
           integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
 
   <!-- Scripts -->
   @vite(['resources/css/front.css'])
@@ -50,9 +53,9 @@
         <div class="hidden w-full lg:block" id="navigation">
           <div class="flex flex-col items-baseline gap-4 mt-6 lg:justify-between lg:flex-row lg:items-center lg:mt-0">
             <div class="flex flex-col w-full ml-auto lg:w-auto gap-4 lg:gap-[50px] lg:items-center lg:flex-row">
-              <a href="#!" class="nav-link-item">Landing</a>
-              <a href="#!" class="nav-link-item">Catalog</a>
-              <a href="#!" class="nav-link-item">Benefits</a>
+              <a href="{{ route('front.index') }}" class="nav-link-item">Landing</a>
+              <a href="{{ route('front.catalog') }}" class="nav-link-item">Catalog</a>
+              <a href="{{ route('front.benefit') }}" class="nav-link-item">Benefits</a>
               <a href="#!" class="nav-link-item">Stories</a>
               <a href="#!" class="nav-link-item">Maps</a>
             </div>
